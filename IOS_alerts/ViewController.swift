@@ -36,8 +36,13 @@ class ViewController: UIViewController {
         let action1:UIAlertAction = UIAlertAction(title: "delete", style: .destructive) { (_:UIAlertAction) in
             print("delete handler actionsheet")
         }
+        // add EXTRA action
+        let action2:UIAlertAction = UIAlertAction(title: "cancel", style: .cancel) { (_:UIAlertAction) in
+            print("cancel handler actionsheet")
+        }
         // add action
         alert.addAction(action1)
+        alert.addAction(action2) // <- second action
         // show alert
         self.present(alert, animated: true) {
             print("Alert handler ActionSheet")
